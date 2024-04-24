@@ -21,6 +21,6 @@ for word, freq in word_freq.items():
 #filtered_text = " ".join(filtered_words_without_punct)
 
 #with open("filtered_random_paragraphs.txt", "w") as outfile:
-    outfile.write(filtered_text)
+#    outfile.write(filtered_text)
     
 
