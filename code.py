@@ -12,12 +12,7 @@ stop_words = set(stopwords.words('english'))
 
 filtered_words = [word.lower() for word in words if word.lower() not in stop_words]
 filtered_words_without_punct = [word for word in filtered_words if word not in punctuation]
-
-filtered_text = " ".join(filtered_words_without_punct)
-
-with open("filtered_random_paragraphs.txt", "w") as outfile:
-    outfile.write(filtered_text)
-    
+
 word_freq = Counter(filtered_words_without_punct)
 for word, freq in word_freq.items():
     print(f"{word}: {freq}")
