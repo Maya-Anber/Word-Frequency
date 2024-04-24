@@ -1,8 +1,9 @@
-FROM python
-RUN pip install nltk
+FROM python:alpine
+
 WORKDIR /FREQ
 
-COPY code.py /FREQ
-COPY random_paragraphs.txt /FREQ
+COPY code.py random_paragraphs.txt /FREQ/
 
-CMD python code.py
+RUN pip install nltk
+
+CMD ["python", "code.py"]
