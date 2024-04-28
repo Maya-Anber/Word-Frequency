@@ -1,5 +1,7 @@
 #code for image 
 import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from string import punctuation
 from collections import Counter
@@ -13,7 +15,8 @@ stop_words = set(stopwords.words('english'))
 
 filtered_words = [word.lower() for word in words if word.lower() not in stop_words]
 filtered_words_without_punct = [word for word in filtered_words if word not in punctuation]
-
+
+
 word_freq = Counter(filtered_words_without_punct)
 for word, freq in word_freq.items():
     print(f"{word}: {freq}")
