@@ -19,4 +19,4 @@ Create a Dockerfile to package the Python script and dependencies into a Docker 
 ## Running the Project
 
 ### Prerequisites
-- Docker installed on your machine.
+- Install Docker.
